@@ -42,4 +42,4 @@ class CompanyController:
                 self.company.add_staff(staff_name, manager)
 
         print("\n=== Company Organizational Hierarchy ===")
-        display_hierarchy(self.company.get_nodes())
+        display_hierarchy(self.company.get_nodes(), ceo_name)

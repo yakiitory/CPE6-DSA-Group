@@ -7,8 +7,8 @@ def show_subordinates(parent, nodes, level):
             print(f"{indent(level)}" + node.role + ": " + node.name)
             show_subordinates(node, nodes, level + 1)
 
-def display_hierarchy(nodes):
+def display_hierarchy(nodes, ceo_name):
     for node in nodes:
         if node.parent == None:
-            print("Chief Executive Officer (CEO): ")
+            print(f"Chief Executive Officer (CEO): {ceo_name}")
             show_subordinates(node, nodes, 1)
